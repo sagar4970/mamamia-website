@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Developer: contact.html (reservation form) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact & Reservation — Mamamia Lounge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <header class="site-header small">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/a23a0b88-8932-48dd-bbb1-963bf851c236.png" alt="logo" class="logo"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta-group">
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="btn btn-gold">Instagram</a>
+        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <div class="container contact-grid">
+      <section class="contact-info">
+        <h2>Contact</h2>
+        <p><strong>Address:</strong> P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore [M.P]</p>
+        <p><strong>Phone:</strong> <a href="tel:+919981114075">9981114075</a>, <a href="tel:+919755766664">9755766664</a></p>
+        <p><strong>Email:</strong> <a href="mailto:reddroofhospitalityllp@gmail.com">reddroofhospitalityllp@gmail.com</a></p>
+        <p><strong>GST:</strong> 23ABIFR2161E1ZJ</p>
+
+        <!-- Google Maps embed: replace src with your Maps embed if you have one -->
+        <div class="map-wrap">
+          <iframe
+            title="Mamamia Location"
+            src="https://www.google.com/maps?q=P+No-A-2+Scheme+No-78+Part-2+Common+The+Hub+Indore&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+
+      <section class="contact-form" id="reservation">
+        <h2>Reserve a Table</h2>
+        <!-- NOTE: form currently posts to #. Hook up to backend or Google Forms for production. -->
+        <form action="#" method="post" id="bookingForm" onsubmit="alert('Reservation submitted (demo). Hook up to backend to receive requests.'); return false;">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="99811xxxxx" required>
+
+          <div class="form-row">
+            <div>
+              <label for="date">Date</label>
+              <input id="date" name="date" type="date" required>
+            </div>
+            <div>
+              <label for="time">Time</label>
+              <input id="time" name="time" type="time" required>
+            </div>
+          </div>
+
+          <label for="guests">Guests</label>
+          <input id="guests" name="guests" type="number" min="1" max="20" value="2" required>
+
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="E.g. Birthday, high chair, etc."></textarea>
+
+          <button class="btn btn-primary" type="submit">Request Reservation</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/2c048304-59d5-4b04-9a32-07acfaca891b.png" alt="Redd Roof Hospitality logo" class="footer-logo">
+        <div class="small">GST: 23ABIFR2161E1ZJ</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div class="footer-contact">
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank">Instagram</a>
+        <div class="small">P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    toggle && toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

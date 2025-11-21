@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Developer: index.html - Home -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mamamia — All Day Sports Bar and Lounge | Indore</title>
+
+  <!-- Google Fonts: luxury headings + modern body -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <!-- NAVBAR (Reusable component) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <!-- Try to use primary logo first; fallback to text -->
+        <img src="images/a23a0b88-8932-48dd-bbb1-963bf851c236.png" alt="Mamamia logo" class="logo">
+      </a>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta-group">
+        <a href="contact.html#reservation" class="btn btn-outline">Reserve Table</a>
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="btn btn-gold">Instagram</a>
+        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Use a subtle dark video background or gradient fallback -->
+    <video class="hero-video" autoplay muted loop playsinline poster="">
+      <!-- Video omitted in repo; replace with your MP4 path if available -->
+      <!-- <source src="videos/hero-loops.mp4" type="video/mp4"> -->
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <img src="images/2614fe93-7314-4b4f-ab86-fa5ee7d81b8f.png" alt="Mamamia logo (alt)" class="hero-logo">
+      <h1 class="hero-title">All Day Sports Bar and Lounge</h1>
+      <p class="hero-sub">A premium sports bar & lounge by Redd Roof Hospitality LLP — Indore nightlife reimagined</p>
+
+      <div class="hero-ctas">
+        <a href="contact.html#reservation" class="btn btn-primary">Reserve Table</a>
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="btn btn-gold">View Instagram</a>
+      </div>
+
+      <ul class="hero-info">
+        <li><strong>Address:</strong> P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore [M.P]</li>
+        <li><strong>Call:</strong> <a href="tel:+919981114075">9981114075</a> / <a href="tel:+919755766664">9755766664</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUICK HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="container grid-3">
+      <div class="card highlight-card">
+        <h3>Premium Cocktails</h3>
+        <p>Specially crafted drinks with seasonal infusions & premium spirits.</p>
+      </div>
+      <div class="card highlight-card">
+        <h3>Live Sports</h3>
+        <p>Multiple screens, immersive sound — catch every match in style.</p>
+      </div>
+      <div class="card highlight-card">
+        <h3>Hookah & Ambience</h3>
+        <p>Comfortable lounges, gold-accent interiors and curated playlists.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Reusable component) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/2c048304-59d5-4b04-9a32-07acfaca891b.png" alt="Redd Roof Hospitality logo" class="footer-logo">
+        <div class="small">
+          <strong>Redd Roof Hospitality LLP</strong><br>
+          GST: 23ABIFR2161E1ZJ<br>
+          &copy; <span id="year"></span> Redd Roof Hospitality LLP
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="social">Instagram</a>
+        <div class="small">P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JS for year and mobile nav (keeps files static) -->
+  <script>
+    // Developer: small helper script (no frameworks)
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

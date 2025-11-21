@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Developer: about.html -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Mamamia Lounge | Indore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <!-- Reuse header -->
+  <header class="site-header small">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/a23a0b88-8932-48dd-bbb1-963bf851c236.png" alt="Mamamia logo" class="logo">
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta-group">
+        <a href="contact.html#reservation" class="btn btn-outline">Reserve</a>
+        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p class="lead">Mamamia is a premium sports bar & lounge by Redd Roof Hospitality LLP. Born from a love for spirited nights, curated music, and unforgettable hospitality — Mamamia combines refined taste with the excitement of live sports.</p>
+
+          <p>Our mission is to offer an upscale, comfortable space where locals and visitors can relax, celebrate, and enjoy outstanding drinks and food while watching matches or spending a night out with friends. From handcrafted cocktails to hookah flavors and a buzzing atmosphere, every detail is crafted for a memorable experience.</p>
+
+          <div class="values">
+            <div>
+              <h4>Ambience</h4>
+              <p>Dark-luxe interiors, ambient lighting, and premium seating.</p>
+            </div>
+            <div>
+              <h4>Vibe</h4>
+              <p>Energetic during match nights, relaxed afternoons, and lively evenings.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-images">
+          <!-- Image gallery with fade-in -->
+          <div class="img-stack">
+            <img class="fade" src="images/2614fe93-7314-4b4f-ab86-fa5ee7d81b8f.png" alt="Mamamia interior image placeholder">
+            <!-- Add more real photos to images/ and replace -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/2c048304-59d5-4b04-9a32-07acfaca891b.png" alt="Redd Roof Hospitality logo" class="footer-logo">
+        <div class="small">
+          <strong>Redd Roof Hospitality LLP</strong><br>
+          GST: 23ABIFR2161E1ZJ
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="social">Instagram</a>
+        <div class="small">P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // enable mobile nav in pages
+    const toggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    toggle && toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
