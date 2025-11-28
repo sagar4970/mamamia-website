@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery — Mamamia Lounge</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.gallery-section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  margin-bottom: 35px;
+  color: #d4af37;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #2b2b2b;
+  transition: 0.35s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  border-color: #d4af37;
+  box-shadow: 0 0 10px #d4af37;
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid img {
+    height: 250px;
+  }
+}
+</style>
+</head>
+
+<body class="dark">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html"><img src="images/a23a0b88-8932-48dd-bbb1-963bf851c236.png" class="logo"></a>
+  </div>
+</header>
+
+<section class="gallery-section">
+  <h1 class="gallery-title">Our Premium Ambience</h1>
+
+  <div class="container gallery-grid">
+    <img src="images/g1.jpg">
+    <img src="images/g2.jpg">
+    <img src="images/g3.jpg">
+    <img src="images/g4.jpg">
+    <img src="images/g5.jpg">
+    <img src="images/g6.jpg">
+  </div>
+</section>
+
+</body>
+</html>
