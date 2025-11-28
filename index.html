@@ -7,103 +7,53 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 
-  <!-- INTERNAL DARK THEME FIXES -->
   <style>
-    /* Full Website Dark Background */
-    body.dark {
-      background: #1A1A1A !important;
-      color: #ffffff;
-    }
+    body.dark { background: #1A1A1A !important; color: #ffffff; }
+    header, section, footer { background: #1A1A1A !important; }
+    .hero, .highlights, .site-footer { background:#1A1A1A !important; }
 
-    header, section, footer {
-      background: #1A1A1A !important;
-    }
+    body { opacity:0; animation:fadeIn .8s ease forwards; }
+    @keyframes fadeIn { to { opacity:1; } }
 
-    .hero, .highlights, .site-footer {
-      background: #1A1A1A !important;
-    }
+    .hero-title, .hero-sub, .hero-ctas, .hero-info { animation:slideUp 1s ease both; }
+    @keyframes slideUp { 0%{ transform:translateY(40px); opacity:0;} 100%{ transform:translateY(0); opacity:1;} }
 
-    /* Smooth Fade Animations */
-    body { opacity: 0; animation: fadeIn 0.8s ease forwards; }
-    @keyframes fadeIn { to { opacity: 1; } }
+    .nav ul li a{ color:#fff; position:relative; }
+    .nav ul li a::after{
+      content:""; position:absolute; left:0; bottom:-3px;
+      width:0%; height:2px; background:#d4af37;
+      transition:0.3s;
+    }
+    .nav ul li a:hover::after { width:100%; }
 
-    .hero-title, .hero-sub, .hero-ctas, .hero-info {
-      animation: slideUp 1s ease both;
-    }
-    @keyframes slideUp {
-      0% { transform: translateY(40px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-
-    /* Navbar luxury underline */
-    .nav ul li a {
-      position: relative;
-      overflow: hidden;
-      color: #fff;
-    }
-    .nav ul li a::after {
-      content: "";
-      position: absolute;
-      left: 0; bottom: -3px;
-      width: 0%; height: 2px;
-      background: #d4af37;
-      transition: 0.3s;
-    }
-    .nav ul li a:hover::after { width: 100%; }
-
-    /* Hero Logo Size (Fix Image Issue) */
-    .hero-logo {
-      width: 860px;
-      height: auto;
-      margin-bottom: 20px;
+    .hero-logo{
+      width:860px; height:auto; margin-bottom:20px;
       animation: glow 3s infinite alternate ease-in-out;
     }
-    @keyframes glow {
-      0% { filter: drop-shadow(0 0 0px #d4af37); }
-      100% { filter: drop-shadow(0 0 25px #d4af37); }
+    @keyframes glow { 0%{filter:drop-shadow(0 0 0px #d4af37);} 100%{filter:drop-shadow(0 0 25px #d4af37);} }
+
+    .highlight-card{
+      background:#222; padding:20px; border-radius:12px; transition:0.3s;
+    }
+    .highlight-card:hover{ transform:translateY(-8px); background:#2c2c2c; }
+
+    .footer-gallery{ display:flex; gap:10px; margin:15px 0; }
+    .footer-gallery img{
+      width:70px; height:90px; object-fit:cover;
+      border-radius:10px; border:2px solid #d4af37;
+      transition:0.3s;
+    }
+    .footer-gallery img:hover{
+      transform:scale(1.08);
+      box-shadow:0 0 10px #d4af37;
     }
 
-    /* Highlight Cards */
-    .highlight-card {
-      transition: 0.3s ease;
-      background: #222;
-      padding: 20px;
-      border-radius: 12px;
-    }
-    .highlight-card:hover {
-      transform: translateY(-8px);
-      background: #2c2c2c;
-    }
-
-    /* Footer Gallery */
-    .footer-gallery {
-      display: flex;
-      gap: 10px;
-      margin: 15px 0;
-    }
-    .footer-gallery img {
-      width: 70px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid #d4af37;
-      transition: 0.3s ease;
-    }
-    .footer-gallery img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 10px #d4af37;
-    }
-
-    /* Footer Logo Hover */
-    .footer-logo {
-      transition: 0.4s ease;
-    }
-    .footer-logo:hover {
-      transform: scale(1.06);
-      filter: drop-shadow(0 0 10px #d4af37);
+    .footer-logo{ transition:0.4s; }
+    .footer-logo:hover{
+      transform:scale(1.06);
+      filter:drop-shadow(0 0 10px #d4af37);
     }
   </style>
 </head>
@@ -115,7 +65,7 @@
     <div class="container header-inner">
 
       <a class="brand" href="index.html">
-        <img src="images/a23a0b88-8932-48dd-bbb1-963bf851c236.png" alt="Mamamia Logo" class="logo">
+        <img src="images/logo.png" alt="Mamamia Logo" class="logo">
       </a>
 
       <nav class="nav">
@@ -141,7 +91,6 @@
   <section class="hero">
     <div class="container hero-content">
 
-      <!-- REPLACE THIS WITH YOUR IMAGE -->
       <img src="images/gst-details.jpg" alt="GST Details" class="hero-logo">
 
       <h1 class="hero-title">All Day Sports Bar and Lounge</h1>
@@ -183,9 +132,8 @@
     <div class="container footer-inner"></div>
 
       <div class="footer-brand">
-        <img src="images/2c048304-59d5-4b04-9a32-07acfaca891b.png" alt="Redd Roof Hospitality" class="footer-logo">
+        <img src="images/footer-logo.png" alt="Redd Roof Hospitality" class="footer-logo">
 
-        <!-- DRINK GALLERY -->
         <div class="footer-gallery">
           <img src="images/drink-1.jpg" alt="Cocktail 1">
           <img src="images/drink-2.jpg" alt="Cocktail 2">
@@ -217,16 +165,11 @@
     </div>
   </footer>
 
-  <!-- JS -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const toggle = document.querySelector('.mobile-toggle');
     const nav = document.querySelector('.nav');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
+    toggle.addEventListener('click', () => { nav.classList.toggle('open'); });
   </script>
 
 </body>
