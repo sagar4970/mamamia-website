@@ -5,155 +5,175 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mamamia — All Day Sports Bar and Lounge | Indore</title>
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    body.dark { background:#1A1A1A !important; color:#fff; }
-    header, section, footer { background:#1A1A1A !important; }
+    body.dark { background: #1A1A1A !important; color: #ffffff; }
+    header, section, footer { background: #1A1A1A !important; }
     .hero, .highlights, .site-footer { background:#1A1A1A !important; }
 
     body { opacity:0; animation:fadeIn .8s ease forwards; }
     @keyframes fadeIn { to { opacity:1; } }
 
     .hero-title, .hero-sub, .hero-ctas, .hero-info { animation:slideUp 1s ease both; }
-    @keyframes slideUp { 0%{transform:translateY(40px);opacity:0;} 100%{transform:translateY(0);opacity:1;} }
+    @keyframes slideUp { 0%{ transform:translateY(40px); opacity:0;} 100%{ transform:translateY(0); opacity:1;} }
 
     .nav ul li a{ color:#fff; position:relative; }
     .nav ul li a::after{
       content:""; position:absolute; left:0; bottom:-3px;
-      width:0%; height:2px; background:#d4af37; transition:.3s;
+      width:0%; height:2px; background:#d4af37;
+      transition:0.3s;
     }
     .nav ul li a:hover::after { width:100%; }
 
-    .hero-logo{ width:860px; height:auto; margin-bottom:20px; animation:glow 3s infinite alternate ease-in-out; }
+    .hero-logo{
+      width:860px; height:auto; margin-bottom:20px;
+      animation: glow 3s infinite alternate ease-in-out;
+    }
     @keyframes glow { 0%{filter:drop-shadow(0 0 0px #d4af37);} 100%{filter:drop-shadow(0 0 25px #d4af37);} }
 
-    .highlight-card{ background:#222; padding:20px; border-radius:12px; transition:.3s; }
+    .highlight-card{
+      background:#222; padding:20px; border-radius:12px; transition:0.3s;
+    }
     .highlight-card:hover{ transform:translateY(-8px); background:#2c2c2c; }
 
     .footer-gallery{ display:flex; gap:10px; margin:15px 0; }
     .footer-gallery img{
       width:70px; height:90px; object-fit:cover;
       border-radius:10px; border:2px solid #d4af37;
-      transition:.3s;
+      transition:0.3s;
     }
-    .footer-gallery img:hover{ transform:scale(1.08); box-shadow:0 0 10px #d4af37; }
+    .footer-gallery img:hover{
+      transform:scale(1.08);
+      box-shadow:0 0 10px #d4af37;
+    }
 
-    .footer-logo{ transition:.4s; }
-    .footer-logo:hover{ transform:scale(1.06); filter:drop-shadow(0 0 10px #d4af37); }
+    .footer-logo{ transition:0.4s; }
+    .footer-logo:hover{
+      transform:scale(1.06);
+      filter:drop-shadow(0 0 10px #d4af37);
+    }
   </style>
 </head>
 
 <body class="dark">
 
-<header class="site-header glass-header">
-  <div class="container header-inner">
+  <!-- NAVBAR -->
+  <header class="site-header glass-header">
+    <div class="container header-inner">
 
-    <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="Mamamia Logo" class="logo">
-    </a>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Mamamia Logo" class="logo">
+      </a>
 
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta-group">
+        <a href="contact.html#reservation" class="btn btn-outline">Reserve Table</a>
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="btn btn-gold">Instagram</a>
+        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <!-- Correct Image -->
+      <img src="images/gst-details.jpg" alt="GST Details" class="hero-logo">
+
+      <h1 class="hero-title">All Day Sports Bar and Lounge</h1>
+      <p class="hero-sub">A premium sports bar & lounge by Redd Roof Hospitality LLP — redefining Indore nightlife</p>
+
+      <div class="hero-ctas">
+        <a href="contact.html#reservation" class="btn btn-primary">Reserve Table</a>
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="btn btn-gold">View Instagram</a>
+      </div>
+
+      <ul class="hero-info">
+        <li><strong>Address:</strong> P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore [M.P]</li>
+        <li><strong>Call:</strong> <a href="tel:+919993213727">99932 13727</a></li>
       </ul>
-    </nav>
 
-    <div class="cta-group">
-      <a href="contact.html#reservation" class="btn btn-outline">Reserve Table</a>
-      <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="btn btn-gold">Instagram</a>
-      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
     </div>
+  </section>
 
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-content">
-
-    <img src="images/gst-details.jpg" alt="GST Details" class="hero-logo">
-
-    <h1 class="hero-title">All Day Sports Bar and Lounge</h1>
-    <p class="hero-sub">A premium sports bar & lounge by Redd Roof Hospitality LLP — redefining Indore nightlife</p>
-
-    <div class="hero-ctas">
-      <a href="contact.html#reservation" class="btn btn-primary">Reserve Table</a>
-      <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="btn btn-gold">View Instagram</a>
-    </div>
-
-    <ul class="hero-info">
-      <li><strong>Address:</strong> P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore [M.P]</li>
-      <li><strong>Call:</strong> <a href="tel:+919993213727">99932 13727</a></li>
-    </ul>
-
-  </div>
-</section>
-
-<section class="highlights">
-  <div class="container grid-3">
-    <div class="card highlight-card">
-      <h3>Premium Cocktails</h3>
-      <p>Signature mixes with seasonal infusions.</p>
-    </div>
-    <div class="card highlight-card">
-      <h3>Live Sports</h3>
-      <p>Multi-screen immersive viewing.</p>
-    </div>
-    <div class="card highlight-card">
-      <h3>Hookah & Ambience</h3>
-      <p>Relaxed lounges & curated playlists.</p>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-
-    <div class="footer-brand">
-      <img src="images/footer-logo.png" alt="Redd Roof Hospitality" class="footer-logo">
-
-      <div class="footer-gallery">
-        <img src="images/drink-1.jpg" alt="Cocktail 1">
-        <img src="images/drink-2.jpg" alt="Cocktail 2">
-        <img src="images/drink-3.jpg" alt="Cocktail 3">
-        <img src="images/lounge.jpg" alt="Lounge">
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="container grid-3">
+      <div class="card highlight-card">
+        <h3>Premium Cocktails</h3>
+        <p>Signature mixes with seasonal infusions.</p>
       </div>
-
-      <div class="small">
-        <strong>Redd Roof Hospitality LLP</strong><br>
-        GST: 23ABIFR2161E1ZJ<br>
-        &copy; <span id="year"></span> Redd Roof Hospitality LLP
+      <div class="card highlight-card">
+        <h3>Live Sports</h3>
+        <p>Multi-screen immersive viewing.</p>
+      </div>
+      <div class="card highlight-card">
+        <h3>Hookah & Ambience</h3>
+        <p>Relaxed lounges & curated playlists.</p>
       </div>
     </div>
+  </section>
 
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="menu.html">Menu</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+
+        <!-- Correct Footer Logo -->
+        <img src="images/footer-logo.png" alt="Redd Roof Hospitality" class="footer-logo">
+
+        <div class="footer-gallery">
+          <img src="images/drink-1.jpg" alt="Cocktail 1">
+          <img src="images/drink-2.jpg" alt="Cocktail 2">
+          <img src="images/drink-3.jpg" alt="Cocktail 3">
+          <img src="images/lounge.jpg" alt="Lounge">
+        </div>
+
+        <div class="small">
+          <strong>Redd Roof Hospitality LLP</strong><br>
+          GST: 23ABIFR2161E1ZJ<br>
+          &copy; <span id="year"></span> Redd Roof Hospitality LLP
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="social">Instagram</a>
+        <div class="small">Call: <a href="tel:+919993213727">99932 13727</a></div>
+        <div class="small">P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore</div>
+      </div>
+
     </div>
+  </footer>
 
-    <div class="footer-contact">
-      <a href="https://www.instagram.com/mamamiaindore" target="_blank" class="social">Instagram</a>
-      <div class="small">Call: <a href="tel:+919993213727">99932 13727</a></div>
-      <div class="small">P No-A-2 Scheme No-78, Part-2, Common The Hub, Indore</div>
-    </div>
-
-  </div>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const toggle = document.querySelector('.mobile-toggle');
-  const nav = document.querySelector('.nav');
-  toggle.addEventListener('click', () => { nav.classList.toggle('open'); });
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => { nav.classList.toggle('open'); });
+  </script>
 
 </body>
 </html>
